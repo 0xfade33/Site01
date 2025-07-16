@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athenaeum</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="hero" id="home">
+        <div class="code-stream left" aria-hidden="true"></div>
+        <div class="hero-center">
+    <img src="images/David_FrontPage.jpg" alt="Michelangelo's David sculpture" class="david">
+    <h1 class="title">Athenaeum</h1>
+</div>
+        <div class="code-stream right" aria-hidden="true"></div>
+        <nav class="main-nav">
+            <a href="#codex">Codex</a>
+            <a href="#studio">Studio</a>
+            <a href="#library">Library</a>
+            <a href="#about">Manifesto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Codex Section -->
+        <section id="codex" class="section">
+            <h2>Codex</h2>
+            <input type="text" id="codex-search" placeholder="Search curiosities..."/>
+            <ul id="codex-list" class="codex-list">
+                <li data-tags="math theorem"><strong>Euler's Identity</strong>: e<sup>iπ</sup> + 1 = 0</li>
+                <li data-tags="algorithms recursion">Recursive Fibonacci (JS): <code>function f(n){return n<2?n:f(n-1)+f(n-2);}</code></li>
+                <li data-tags="art insight">"The sculpture is already complete within the marble." – Michelangelo</li>
+                <li data-tags="assembly code">x86 NOP slide: <code>0x90 0x90 0x90 ...</code></li>
+            </ul>
+        </section>
+
+        <!-- Studio Section -->
+        <section id="studio" class="section bg-alt">
+            <h2>Studio</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <canvas id="generative1" width="300" height="300"></canvas>
+                    <pre><code class="code-block">// Generative Circles
+for(let i=0;i<100;i++){ctx.arc(r(),r(),r()/4,0,2*Math.PI);ctx.stroke();}</code></pre>
+                </div>
+            </div>
+            <button id="black-hole-btn" class="black-hole-btn">Black Hole</button>
+        </section>
+
+        <!-- Library Section -->
+        <section id="library" class="section">
+            <h2>Library</h2>
+            <div class="library-grid">
+                <article class="library-item" data-tags="book philosophy">
+                    <h3>Gödel, Escher, Bach</h3>
+                    <p>Douglas Hofstadter, 1979</p>
+                </article>
+                <article class="library-item" data-tags="film sci-fi">
+                    <h3>Blade Runner 2049</h3>
+                    <p>Denis Villeneuve, 2017</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section bg-alt manifesto">
+            <h2>Manifesto</h2>
+            <p>
+                Athenaeum is a sanctuary where sculpture meets circuitry, where algorithms echo through vaulted
+                naves of marble and silicone. This is a living manuscript — a codex of code, art, and inquiry —
+                curated to celebrate complexity as the highest form of beauty.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Athenaeum • Crafted in the liminal space between art and code</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
